@@ -5,10 +5,12 @@ namespace Account;
 class Account
 {
 	private $balance;
+	private $accountNumber;
 
-	public function __construct( float $init_balance ) 
+	public function __construct( float $init_balance, int $accountNumber ) 
 	{
 		$this->balance = $init_balance;
+		$this->accountNumber = $accountNumber;
 	}
 
 	public function getBalance()
@@ -22,5 +24,17 @@ class Account
 	public function withdraw ( float $amt )
 	{
 		$this->balance -= $amt;
+	}
+}
+
+class Customer
+{
+	private $account;
+	private $name;
+
+	public function __construct( Account $account, string $name )
+	{
+		$this->account = $account;
+		$this->name = $name;
 	}
 }
