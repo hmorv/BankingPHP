@@ -51,4 +51,17 @@ class Card
 		$this->id = $id;
 		$this->type = $type;
 	}
+
+	public function getCredit()
+	{
+		return $this->credit;
+	}
+	public function getId()
+	{
+		return $this->id;
+	}
+	public function getType()
+	{
+		return $this->type;
+	}
 }
