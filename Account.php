@@ -38,3 +38,17 @@ class Customer
 		$this->name = $name;
 	}
 }
+
+class Card
+{
+	private $credit;
+	private $id;
+	private $type;
+
+	public function __construct( float $credit, string $id, string $type )
+	{
+		$this->credit = $credit;
+		$this->id = $id;
+		$this->type = $type;
+	}
+}
