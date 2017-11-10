@@ -65,3 +65,9 @@ class Card
 		return $this->type;
 	}
 }
+
+abstract class CardType
+{
+	const Credit = 0;
+	const Debit = 1;
+}
